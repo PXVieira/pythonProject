@@ -1,9 +1,6 @@
 from tqdm import tqdm
-from time import sleep
 
 from mod_pack.database import *
-from mod_pack.menu_cadastro import *
-from mod_pack.numeros import *
 from mod_pack.textos import *
 
 

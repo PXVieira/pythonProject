@@ -13,6 +13,6 @@ e = Numbers.n_int_range("Sua escolha: ", f=6)
 esc(e)
 
 
-for i in tqdm(range(0, 3), desc="Salvando e encerrando o sistema..."):
-    sleep(0.2)
+for i in tqdm(range(0, 5), desc="Salvando e encerrando o sistema..."):
+    sleep(0.5)
     pass
