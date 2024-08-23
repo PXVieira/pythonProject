@@ -3,6 +3,10 @@ from peewee import *
 from datetime import datetime
 from time import sleep
 from os import system as limpar
+from mod_pack.database import *
+from mod_pack.menu_cadastro import *
+from mod_pack.numeros import *
+from mod_pack.textos import *
 
 db = SqliteDatabase("base.db")
 
@@ -42,7 +46,7 @@ def db_connect():
     try:
         db.connect()
         print("Conexão com o banco de dados realizada com SUCESSO!")
-        sleep(2)
+        sleep(0.5)
         limpar("cls")
     except Exception as e:
         print("Erro! Não foi possível realizar a conexão!\n", type(e), ":", e)
@@ -73,6 +77,35 @@ def db_close():
         limpar("cls")
     except Exception as e:
         print("Erro! Não foi possível encerrar banco de dados!\n", type(e), ":", e)
+
+
+class Cadastrar:
+    def __init__(self, moto):
+        self.moto = moto
+
+    def moto():
+        while True:
+            moto = Strings.str_txt("Motorista: ")
+            cpf = Strings.str_cpf("CPF: ")
+            celular = Strings.str_cel("Celular: ")
+
+            try:
+                db_connect()
+                cdt = Motorista.create(nome_moto=moto, cpf=cpf, n_celular=celular)
+                print(f'"{moto}" Cadastrado com SUCESSO!')
+                sleep(2)
+                db_close()
+                limpar("cls")
+            except Exception as e:
+                print(f'Erro! Não foi possível cadastrar. "{moto}"')
+
+            sair = str(input("Continuar cadastrando? [S/N]: ")).upper().strip()[0]
+            if sair == "S":
+                pass
+            elif sair == "N":
+                break
+            else:
+                print("Erro! Opção inválida, apenas S ou N")
 
 
 # db_connect()
