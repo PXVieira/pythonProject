@@ -1,6 +1,9 @@
 from tqdm import tqdm
+from time import sleep
 
 from mod_pack.database import *
+from mod_pack.menu_cadastro import *
+from mod_pack.numeros import *
 from mod_pack.textos import *
 
 
@@ -27,7 +30,7 @@ def esc(e):
     sair = True
     while sair:
         if e == 1:
-            Cadastrar.moto()
+            NCadastro.moto()
         if e == 2:
             ...
         if e == 3:

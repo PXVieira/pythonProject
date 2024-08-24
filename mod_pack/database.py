@@ -79,7 +79,7 @@ def db_close():
         print("Erro! Não foi possível encerrar banco de dados!\n", type(e), ":", e)
 
 
-class Cadastrar:
+class NCadastro:
     def __init__(self, moto):
         self.moto = moto
 

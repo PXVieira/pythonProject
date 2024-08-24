@@ -13,7 +13,7 @@ Vou simular um app de logística (entrada e saída) de uma empresa.
 
   -Coletar os dados do responsável pela liberação do motorista.
     -Nome
-    -ID (identificação do responsável dentro da empresa.
+    -ID (identificação do responsável dentro da empresa).
       -Algumas empresas chamam de ID = Identificador ou RE = Registro
     -Ramal
     -Setor de entrega
